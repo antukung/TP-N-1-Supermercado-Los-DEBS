@@ -1,0 +1,15 @@
+body {
+    place-content: center;
+    display: grid;
+    background-color: rgba(133, 126, 126, 0.496);
+    font-family: monospace;
+}
+
+#opciones {
+    background-color: rgb(109, 106, 109);
+    border: 1em solid rrgb(100, 129, 100);
+}
+
+#ventas {
+    background-color: rgb(102, 96, 96);
+}
