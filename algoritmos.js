@@ -3,9 +3,6 @@ const selectCantidadDeProductos = document.querySelector("#cantidad-de-productos
 const selectColores = document.querySelector("#colores");
 const fielsetVentas = document.querySelector("#ventas");
 
-vectorColores=[]
-
-
 const IMG_1 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdQO7ZGEsQQLmLDxJOqOkhu2wxGGZpqB6_OE7lZa4VMFwEzRi4I0Hh-oH2Qt1-l2i1hlM&usqp=CAU"
 const IMG_2 = "https://www.cocacola.es/content/dam/one/es/es2/coca-cola/products/productos/dic-2021/CC_Origal.jpg";
 const IMG_3 = "https://www.cuerpomente.com/medio/2021/01/07/propiedades-manzana_6c6baf54_1200x630.jpg";
@@ -30,7 +27,7 @@ const NOMBRE_10="pasetelito"
 let IMAGENES= [{IMG_1,NOMBRE_1},{IMG_2,NOMBRE_2},{IMG_3,NOMBRE_3},{IMG_4,NOMBRE_4},{IMG_5,NOMBRE_5},{IMG_6,NOMBRE_6},{IMG_7,NOMBRE_7},{IMG_8,NOMBRE_8},{IMG_9,NOMBRE_9},{IMG_10,NOMBRE_10}]
 
 
-function verificar() {
+/*function verificar() {
     switch (parseInt(selectTiposDeProducto.value)) {
         case 1:
             fielsetVentas.innerHTML =`
@@ -118,4 +115,43 @@ function verificar() {
             break;
     }
 
+}*/
+
+function verificar() {
+    generarProductos();
+    generarCantidadDeProductos();
+    cambiarColorAlProducto ();
+}
+
+
+function generarProductos() {
+    /*console.log ("PRODUCTO1")*/
+
+    
+}
+
+function generarCantidadDeProductos() {
+    /*document.write ("ESCIRIBIR")*/
+    fielsetVentas.innerHTML="";
+    const cantidadDeProductosGenerar= parseInt(selectTiposDeProducto.value)
+        for (let i = 0; i < cantidadDeProductosGenerar; i++){
+            nombreseimagenes=IMAGENES[i]
+            let opcinesProductosGenerar="";
+            const cantidadDeArticulosSelecionar= parseInt(selectCantidadDeProductos.value);
+                for (let e = 1; e < cantidadDeArticulosSelecionar; e++){
+                    opcinesProductosGenerar+= `<option value="${e}">${e}</option>`
+1                   
+                }
+                fielsetVentas.innerHTML += `
+                <div class="producto">
+                Producto 1
+                </div>
+                `;
+            
+  }
+}
+
+function cambiarColorAlProducto() {
+    /*console.log ("PRODUCTO2")*/
+    
 }
