@@ -16,33 +16,50 @@ const IMG_7 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlBJMXufeIW
 const IMG_8 = "https://img.freepik.com/fotos-premium/chupetin-rayas-blancas-rojas-lazo-rojo_262259-3.jpg?w=2000";
 const IMG_9 = "https://cdn11.bigcommerce.com/s-3stx4pub31/images/stencil/1280x1280/products/3987/10205/mantecol253__21090.1651773409.jpg?c=2";
 const IMG_10 = "https://vinomanos.com/wp-content/uploads/2021/12/PORTADA-PAN-DULCE-min.jpg";
-const IMG_11 = "https://shoppicture.ww-api.com/pretty_pict/v1/1800x1800/50x50/v1/commerce_pict/2458325/1599074558854_64512/pan-flauta.png";
-const IMG_12 = "https://desayunospersonalizados.com/wp-content/uploads/2021/06/128142-01_arcor-chocolate-butter-toffee-chewy-candy-1lb-bag_1200x1200.jpg";
-const IMG_13 = "https://media.tycsports.com/files/2022/01/26/383756/caramelos-sugus_862x485.jpg?v=3";
-const IMG_14 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpQh17LXoVnEJG1e_8uD_gz3ksutgDF7MABunu4njYvULB1FTqaIoQSPN2v2O9n27V7tk&usqp=CAU";
-const IMG_15 = "https://universoventura.vteximg.com.br/arquivos/ids/193028-600-600/Remera-Manga-Corta-DC-Shoes-Round-We-Go-Urbano-Hombre-Negro-1222102104.jpg?v=637789732032600000";
-const IMG_16 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsJ0Z1R1Dy3m8r-xQudGMFb2U4FWp9XXT2Vi0cMWrW8i6HnUhgKJ0-MQ-o6LAz4O_Ox40&usqp=CAU";
-const IMG_17 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvYCgccfxjBz-11ZN8HlANTLxT3-W_QYOKof3Xbm2QGm9OQrJyMXSPGGtUfDoRb3i6EI0&usqp=CAU";
-const IMG_18 = "https://http2.mlstatic.com/D_NQ_NP_637905-MLA50810082617_072022-O.webp";
-const IMG_19 = "https://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2022/01/computer-coloring-page.png";
-const IMG_20 = "https://http2.mlstatic.com/D_NQ_NP_769688-MLA46234024274_062021-O.webp";
-const IMG_21 = "https://calmessimple.com.ar/wp-content/uploads/2019/10/FotoAlmohada-02-1280x853.jpg";
+const NOMBRE_1="sanwich";
+const NOMBRE_2="coca-cola";
+const NOMBRE_3="manzana";
+const NOMBRE_4="mantecol";
+const NOMBRE_5="levite";
+const NOMBRE_6="pelota";
+const NOMBRE_7="pan";
+const NOMBRE_8="paleta";
+const NOMBRE_9="MANTECOL GRANDE";
+const NOMBRE_10="pasetelito"
 
-
+let IMAGENES= [{IMG_1,NOMBRE_1},{IMG_2,NOMBRE_2},{IMG_3,NOMBRE_3},{IMG_4,NOMBRE_4},{IMG_5,NOMBRE_5},{IMG_6,NOMBRE_6},{IMG_7,NOMBRE_7},{IMG_8,NOMBRE_8},{IMG_9,NOMBRE_9},{IMG_10,NOMBRE_10}]
 
 
 function verificar() {
     switch (parseInt(selectTiposDeProducto.value)) {
         case 1:
-            fielsetVentas.innerHTML = `<div><p>Producto 1</p>
+            fielsetVentas.innerHTML =`
+                                    <div><p>Producto 1</p>
                                     <img src="${IMG_1}" alt="">
-
-                                    </div>
-                                    `
+                                    </div>`
+                         
+                                    
 
             break;
         case 3:
-            fielsetVentas.innerHTML = `<div><p>Producto 2</p>
+            fielsetVentas.innerHTML = `<div><p>Producto 1</p>
+                                <img src="${IMG_1}" alt="">
+                                </div>
+                                <div><p>Producto 2</p>
+                                <img src="${IMG_2}" alt="">
+                                </div>
+                                <div><p>Producto 3</p>
+                                <img src="${IMG_3}" alt="">
+                                </div>
+                                `
+
+
+            break;
+        case 7:
+            fielsetVentas.innerHTML = `<div><p>Producto 1</p>
+                                <img src="${IMG_1}" alt="">
+                                </div>
+                                <div><p>Producto 2</p>
                                 <img src="${IMG_2}" alt="">
                                 </div>
                                 <div><p>Producto 3</p>
@@ -51,12 +68,32 @@ function verificar() {
                                 <div><p>Producto 4</p>
                                 <img src="${IMG_4}" alt="">
                                 </div>
+                                <div><p>Producto 5</p>
+                                <img src="${IMG_5}" alt="">
+                                </div>
+                                <div><p>Producto 6</p>
+                                <img src="${IMG_6}" alt="">
+                                </div>
+                                <div><p>Producto 7</p>
+                                <img src="${IMG_7}" alt="">
+                                </div>
                                 `
 
-
             break;
-        case 7:
-            fielsetVentas.innerHTML = `<div><p>Producto 5</p>
+        case 10:
+            fielsetVentas.innerHTML = `<div><p>Producto 1</p>
+                                <img src="${IMG_1}" alt="">
+                                </div>
+                                <div><p>Producto 2</p>
+                                <img src="${IMG_2}" alt="">
+                                </div>
+                                <div><p>Producto 3</p>
+                                <img src="${IMG_3}" alt="">
+                                </div>
+                                <div><p>Producto 4</p>
+                                <img src="${IMG_4}" alt="">
+                                </div>
+                                <div><p>Producto 5</p>
                                 <img src="${IMG_5}" alt="">
                                 </div>
                                 <div><p>Producto 6</p>
@@ -73,43 +110,6 @@ function verificar() {
                                 </div>
                                 <div><p>Producto 10</p>
                                 <img src="${IMG_10}" alt="">
-                                </div>
-                                <div><p>Producto 11</p>
-                                <img src="${IMG_11}" alt="">
-                                </div>
-                                `
-
-            break;
-        case 10:
-            fielsetVentas.innerHTML = `<div><p>Producto 12</p>
-                                <img src="${IMG_12}" alt="">
-                                </div>
-                                <div><p>Producto 13</p>
-                                <img src="${IMG_13}" alt="">
-                                </div>
-                                <div><p>Producto 14</p>
-                                <img src="${IMG_14}" alt="">
-                                </div>
-                                <div><p>Producto 15</p>
-                                <img src="${IMG_15}" alt="">
-                                </div>
-                                <div><p>Producto 16</p>
-                                <img src="${IMG_16}" alt="">
-                                </div>
-                                <div><p>Producto 17</p>
-                                <img src="${IMG_17}" alt="">
-                                </div>
-                                <div><p>Producto 18</p>
-                                <img src="${IMG_18}" alt="">
-                                </div>
-                                <div><p>Producto 19</p>
-                                <img src="${IMG_19}" alt="">
-                                </div>
-                                <div><p>Producto 20</p>
-                                <img src="${IMG_20}" alt="">
-                                </div>
-                                <div><p>Producto 21</p>
-                                <img src="${IMG_21}" alt="">
                                 </div>
                                 `
 
