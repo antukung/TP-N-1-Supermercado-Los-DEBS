@@ -2,6 +2,7 @@ const selectTiposDeProducto = document.querySelector("#tipos-de-productos");
 const selectCantidadDeProductos = document.querySelector("#cantidad-de-productos");
 const selectColores = document.querySelector("#colores");
 const fielsetVentas = document.querySelector("#ventas");
+const fielsetCompras = document.querySelector("#compras-realizadas")
 
 const IMG_1 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdQO7ZGEsQQLmLDxJOqOkhu2wxGGZpqB6_OE7lZa4VMFwEzRi4I0Hh-oH2Qt1-l2i1hlM&usqp=CAU"
 const IMG_2 = "https://www.cocacola.es/content/dam/one/es/es2/coca-cola/products/productos/dic-2021/CC_Origal.jpg";
@@ -13,20 +14,20 @@ const IMG_7 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlBJMXufeIW
 const IMG_8 = "https://img.freepik.com/fotos-premium/chupetin-rayas-blancas-rojas-lazo-rojo_262259-3.jpg?w=2000";
 const IMG_9 = "https://cdn11.bigcommerce.com/s-3stx4pub31/images/stencil/1280x1280/products/3987/10205/mantecol253__21090.1651773409.jpg?c=2";
 const IMG_10 = "https://vinomanos.com/wp-content/uploads/2021/12/PORTADA-PAN-DULCE-min.jpg";
-const NOMBRE_1="sanwich";
-const NOMBRE_2="coca-cola";
-const NOMBRE_3="manzana";
-const NOMBRE_4="mantecol";
-const NOMBRE_5="levite";
-const NOMBRE_6="pelota";
-const NOMBRE_7="pan";
-const NOMBRE_8="paleta";
-const NOMBRE_9="MANTECOL GRANDE";
-const NOMBRE_10="pasetelito"
+const NOMBRE_1 = "sanwich";
+const NOMBRE_2 = "coca-cola";
+const NOMBRE_3 = "manzana";
+const NOMBRE_4 = "mantecol";
+const NOMBRE_5 = "levite";
+const NOMBRE_6 = "pelota";
+const NOMBRE_7 = "pan";
+const NOMBRE_8 = "paleta";
+const NOMBRE_9 = "MANTECOL GRANDE";
+const NOMBRE_10 = "pasetelito"
 
-let IMAGENES= [{IMG_1,NOMBRE_1},{IMG_2,NOMBRE_2},{IMG_3,NOMBRE_3},{IMG_4,NOMBRE_4},{IMG_5,NOMBRE_5},{IMG_6,NOMBRE_6},{IMG_7,NOMBRE_7},{IMG_8,NOMBRE_8},{IMG_9,NOMBRE_9},{IMG_10,NOMBRE_10}]
-
-
+let IMAGENES = [IMG_1, IMG_2, IMG_3, IMG_4, IMG_5, IMG_6, IMG_7, IMG_8, IMG_9, IMG_10]
+let NOMBRES = [NOMBRE_1, NOMBRE_2, NOMBRE_3, NOMBRE_4, NOMBRE_5, NOMBRE_6, NOMBRE_8, NOMBRE_9, NOMBRE_10]
+let COLORES=[white,red,yellow,green,violet,blue,gray]
 /*function verificar() {
     switch (parseInt(selectTiposDeProducto.value)) {
         case 1:
@@ -118,40 +119,61 @@ let IMAGENES= [{IMG_1,NOMBRE_1},{IMG_2,NOMBRE_2},{IMG_3,NOMBRE_3},{IMG_4,NOMBRE_
 }*/
 
 function verificar() {
-    generarProductos();
     generarCantidadDeProductos();
-    cambiarColorAlProducto ();
+    cambiarColorAlProducto();
 }
 
 
 function generarProductos() {
     /*console.log ("PRODUCTO1")*/
-
     
+alert ("que mal");
+
 }
 
 function generarCantidadDeProductos() {
     /*document.write ("ESCIRIBIR")*/
-    fielsetVentas.innerHTML="";
-    const cantidadDeProductosGenerar= parseInt(selectTiposDeProducto.value)
-        for (let i = 0; i < cantidadDeProductosGenerar; i++){
-            nombreseimagenes=IMAGENES[i]
-            let opcinesProductosGenerar="";
-            const cantidadDeArticulosSelecionar= parseInt(selectCantidadDeProductos.value);
-                for (let e = 1; e < cantidadDeArticulosSelecionar; e++){
-                    opcinesProductosGenerar+= `<option value="${e}">${e}</option>`
-1                   
-                }
-                fielsetVentas.innerHTML += `
-                <div class="producto">
-                Producto 1
+    fielsetVentas.innerHTML = "";
+    const cantidadDeProductosGenerar = parseInt(selectTiposDeProducto.value)
+    for (let i = 0; i <= cantidadDeProductosGenerar; i++) {
+        nombreseimagenes = IMAGENES[i]
+        nombredelproducto = NOMBRES[i]
+        let opcinesProductosGenerar = "";
+        const cantidadDeArticulosSelecionar = parseInt(selectCantidadDeProductos.value);
+        for (let e = 1; e <= cantidadDeArticulosSelecionar; e++) {
+            opcinesProductosGenerar += `<option value="${e}">${e}</option>`
+
+        }
+        fielsetVentas.innerHTML += `
+                <div class="nombredelproducto">
+                <p>Producto=${NOMBRES[i]}</p>
+                <img src="${IMAGENES[i]}" alt="">
+                <span>cantidad a comprar</span>
+                <select name="" id="">
+                <option value="${opcinesProductosGenerar}"></option>   
+                </select>
+                <button onclick=generarProductos()>COMPRAR</button>
                 </div>
                 `;
-            
-  }
+
+    }
 }
+
 
 function cambiarColorAlProducto() {
     /*console.log ("PRODUCTO2")*/
-    
+ const colorDelProducto= document.getElementsByClassName('nombredelproducto')
+for (let i = 0; i < colorDelProducto.length; i++) {
+    const  nombredelproducto= colorDelProducto[i];
+    const par= (i+1)/2 == 0;
+}
+ switch (selectColores.value) {
+    case "0":
+         nombredelproducto.style.backgraundColor= "white"
+        
+        break;
+ 
+    default:
+        break;
+ }
 }
