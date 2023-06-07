@@ -1,20 +1,18 @@
 # TP-N-1-Supermercado-Los-DEBS
 Trabajo practico de PROGRAMACION FECHA DE ENTREGA EL 7/06/2023
 
-Este trabajo practico esta hecho con mucho amor todabia le falta la opcion del al boton 
-agregarle la funcionalidad de que al daarle a comprar se compre abajo del producto y no 
-entiendo como darle color a los div pero bueno son detalles que hire trabajando 
+-¿En que consta este trabajo?
+Es un supermercado en el que uno va y compra objetos que estan a la venta.
 
-TENGO HECHO:
+-¿Que te llevas de este ejercicio?
 
-TP1
-TP2
-TP3
-TP4
-TP5
-TP6
-TP7
-TP8
-TP9
-TP10
-aparte de mucho ejercicios 
+Me llevo la sintaxis de Java Scrip. Cosa que no conocia para nada. Tenia alguna idea de html pero hasta ahi nomas.
+
+-¿Que se te complico en la pagina-
+
+Tiene varios errores para empezar no entiendo por que razon siempre que pongo 10 productos tira 11 no se porque razon, algo que
+tambien falta es el tema del color no logre no se porque razon que cambien de color los items.
+
+-¿Que le agregarias?-
+
+Creo que la funcionalidad de que cuando le doy al boton COMPRAR aprezca el objeto comprado en una lista con su respectiva cantidad.
