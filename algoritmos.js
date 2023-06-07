@@ -135,7 +135,7 @@ function generarCantidadDeProductos() {
     /*document.write ("ESCIRIBIR")*/
     fielsetVentas.innerHTML = "";
     const cantidadDeProductosGenerar = parseInt(selectTiposDeProducto.value)
-    for (let i = 0; i <= cantidadDeProductosGenerar; i++) {
+    for (let i = 1; i <= cantidadDeProductosGenerar; i++) {
         nombreseimagenes = IMAGENES[i]
         nombredelproducto = NOMBRES[i]
         let opcinesProductosGenerar = "";
@@ -145,7 +145,7 @@ function generarCantidadDeProductos() {
 
         }
         fielsetVentas.innerHTML += `
-                <div class="nombredelproducto">
+                <div id="nombre-${i}">
                 <p>Producto=${NOMBRES[i]}</p>
                 <img src="${IMAGENES[i]}" alt="">
                 <span>cantidad a comprar</span>
@@ -162,18 +162,30 @@ function generarCantidadDeProductos() {
 
 function cambiarColorAlProducto() {
     /*console.log ("PRODUCTO2")*/
- const colorDelProducto= document.getElementsByClassName('nombredelproducto')
-for (let i = 0; i < colorDelProducto.length; i++) {
-    const  nombredelproducto= colorDelProducto[i];
+const colorDelProducto=document.querySelector(`#nombre-${i}`);
+for (let i = 0; i <= colorDelProducto.length; i++) {
+    const  nombre= colorDelProducto[i];
     const par= (i+1)/2 == 0;
-}
+
  switch (selectColores.value) {
     case "0":
-         nombredelproducto.style.backgraundColor= "white"
+         nombre.style.backgraundColor= "white";
         
         break;
- 
+    case "Rojo-amarillo":
+        nombre.style.backgraundColor= "red";
+           
+        break;
+    case "Verde-violeta":
+        nombre.style.backgraundColor= "green";
+           
+        break;
+    case "Azul-gris":
+        nombre.style.backgraundColor= "blue";
+           
+        break;  
     default:
         break;
  }
+}
 }
