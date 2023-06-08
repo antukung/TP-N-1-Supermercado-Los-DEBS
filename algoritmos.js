@@ -25,8 +25,8 @@ const NOMBRE_8 = "paleta";
 const NOMBRE_9 = "MANTECOL GRANDE";
 const NOMBRE_10 = "pasetelito"
 
-let IMAGENES = [IMG_1, IMG_2, IMG_3, IMG_4, IMG_5, IMG_6, IMG_7, IMG_8, IMG_9, IMG_10]
-let NOMBRES = [NOMBRE_1, NOMBRE_2, NOMBRE_3, NOMBRE_4, NOMBRE_5, NOMBRE_6, NOMBRE_8, NOMBRE_9, NOMBRE_10]
+let IMAGENES = [0,IMG_1, IMG_2, IMG_3, IMG_4, IMG_5, IMG_6, IMG_7, IMG_8, IMG_9, IMG_10]
+let NOMBRES = [0,NOMBRE_1, NOMBRE_2, NOMBRE_3, NOMBRE_4, NOMBRE_5, NOMBRE_6, NOMBRE_8, NOMBRE_9, NOMBRE_10]
 let COLORES=[white,red,yellow,green,violet,blue,gray]
 /*function verificar() {
     switch (parseInt(selectTiposDeProducto.value)) {
@@ -119,16 +119,23 @@ let COLORES=[white,red,yellow,green,violet,blue,gray]
 }*/
 
 function verificar() {
+    generarProductos();
     generarCantidadDeProductos();
     cambiarColorAlProducto();
 }
 
 
 function generarProductos() {
-    /*console.log ("PRODUCTO1")*/
-    
-alert ("que mal");
+  //  console.log ("PRODUCTO1")
+  const opcionesSelecionProducto= selectTiposDeProducto.value;
+  const opcinesSelecionCantidad= selectCantidadDeProductos.value;
+  const opcionesSelecionDeColor= selectColores.value;
 
+  fielsetCompras.innerHTML=`<div>
+                            <p>Tipos de productos ${opcionesSelecionProducto}</p>
+                           <p>Cantidad de productos ${opcinesSelecionCantidad}</p>
+                           <p>Tipo de color ${opcionesSelecionDeColor}</p>
+                           </div>`
 }
 
 function generarCantidadDeProductos() {
@@ -152,7 +159,7 @@ function generarCantidadDeProductos() {
                 <select name="" id="">
                 <option value="${opcinesProductosGenerar}"></option>   
                 </select>
-                <button onclick=generarProductos()>COMPRAR</button>
+                <button id="btn-i">COMPRAR</button>
                 </div>
                 `;
 
@@ -163,7 +170,7 @@ function generarCantidadDeProductos() {
 function cambiarColorAlProducto() {
     /*console.log ("PRODUCTO2")*/
 const colorDelProducto=document.querySelector(`#nombre-${i}`);
-for (let i = 0; i <= colorDelProducto.length; i++) {
+for (let i = 1; i <= colorDelProducto.length; i++) {
     const  nombre= colorDelProducto[i];
     const par= (i+1)/2 == 0;
 
@@ -189,3 +196,8 @@ for (let i = 0; i <= colorDelProducto.length; i++) {
  }
 }
 }
+/*function click () {
+    fielsetVentas.innerHTML=`<p>compramos${NOMBRES[i]}</p>
+                             <p> en ${opcinesProductosGenerar}</p>`;
+    
+}*/
