@@ -1,7 +1,7 @@
 body {
     place-content: center;
     display: grid;
-    background-color: rgba(133, 126, 126, 0.496);
+    background-color: rgba(156, 25, 25, 0.496);
     font-family: monospace;
 }
 
@@ -25,3 +25,24 @@ img {
     width: 80px;
 }
 
+#comercio {
+    background-color: rgb(37, 53, 95);
+    place-content: flex-end;
+    display: flex;
+}
+
+#producto-0 {
+    background-color: white;
+}
+
+#producto-1 {
+    background-color: blueviolet;
+}
+
+#producto-2 {
+    background-color: red;
+}
+
+#producto-3 {
+    background-color: yellow;
+}
